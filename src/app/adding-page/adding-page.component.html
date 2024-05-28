@@ -1,18 +1,99 @@
-<div>
-  <form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+<div class="forms">
+  <form (submit)="onSubmit(0)">
+    <div class="row">
+      <div class="col">
+        <h6>Shipment number</h6>
+        <input type="text" class="form-control" placeholder="XXX-XXXXXX" data-key="shipmentNumber">
+      </div>
+      <div class="col">
+        <h6>Destination Airport</h6>
+        <input type="text" class="form-control" placeholder="TLN, RIX, HEL" data-key="destinationAirport">
+      </div>
+      <div class="col">
+        <h6>Flight Number</h6>
+        <input type="text" class="form-control" placeholder="LLNNNN" data-key="flightNumber">
+      </div>
+      <div class="col">
+        <h6>Destination Airport</h6>
+        <input type="text" class="form-control" placeholder="YYYY-MM-DDT00:00:00" data-key="flightDate">
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  <button type="submit" (click)="onSubmit(0)">Create Shipment</button>
+</div>
+<div class="forms">
+  <form>
+    <div class="row">
+      <div class="col">
+        <h6>Shipment Number</h6>
+        <input type="text" class="form-control" placeholder="XXX-XXXXXX" data-key="shipmentNumber">
+      </div>
+      <div class="col">
+        <h6>Bag Number</h6>
+        <input type="text" class="form-control" placeholder="1-15 Characters" data-key="bagNumber">
+      </div>
+    </div>
+  </form>
+  <button type="button">Create Bag</button>
+</div>
+<div class="forms">
+  <form>
+    <div class="row">
+      <div class="col">
+        <h6>Parcel Number</h6>
+        <input type="text" class="form-control" placeholder="LLNNNNNNLL" data-key="parcelNumber">
+      </div>
+      <div class="col">
+        <h6>Recipient Name</h6>
+        <input type="text" class="form-control" placeholder="Max 100 Characters" data-key="recipientName">
+      </div>
+      <div class="col">
+        <h6>Destination Country</h6>
+        <input type="text" class="form-control" placeholder="EE, LV, FI" data-key="destinationCountry">
+      </div>
+      <div class="col">
+        <h6>Weight</h6>
+        <input type="number" class="form-control" placeholder="0.000" data-key="weight">
+      </div>
+      <div class="col">
+        <h6>Price</h6>
+        <input type="number" class="form-control" placeholder="0.00" data-key="price">
+      </div>
+      <div class="col">
+        <h6>Bag Number</h6>
+        <input type="text" class="form-control" placeholder="1-15 Characters" data-key="bagNumber">
+      </div>
+    </div>
+  </form>
+  <button type="button">Create Parcel</button>
+</div>
+<div class="forms">
+  <form>
+    <div class="row">
+      <div class="col">
+        <h6>Shipment Number</h6>
+        <input type="text" class="form-control" placeholder="XXX-XXXXXX" data-key="shipmentNumber">
+      </div>
+      <div class="col">
+        <h6>Bag Number</h6>
+        <input type="text" class="form-control" placeholder="1-15 Characters" data-key="bagNumber">
+      </div>
+      <div class="col">
+        <h6>Number of letters</h6>
+        <input type="number" class="form-control" placeholder="0+" data-key="numberOfLetters">
+      </div>
+    </div>
+  </form>
+  <button type="button">Add Letters</button>
+</div>
+<div class="forms">
+  <form>
+    <div class="row">
+      <div class="col">
+        <h6>Shipment number</h6>
+        <input type="text" class="form-control" placeholder="XXX-XXXXXX" data-key="shipmentNumber">
+      </div>
+    </div>
+  </form>
+  <button type="button">Finalize shipment</button>
 </div>

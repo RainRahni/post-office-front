@@ -13,4 +13,11 @@ export class ShipmentService {
   public getCreatedShipments(): Observable<Shipment[]> {
     return this.http.get<Shipment[]>(`${this.apiServerUrl}/api/Shipment`);
   }
+  public createShipment(data: any): Observable<any> {
+    return this.http.post(`${this.apiServerUrl}/api/Shipment/Initial`, data);
+  }
+
+  public finalizeShipment(shipmentNumber: string): Observable<any> {
+    return this.http.post(`${this.apiServerUrl}/api/Shipment/Final`, { shipmentNumber });
+  }
 }

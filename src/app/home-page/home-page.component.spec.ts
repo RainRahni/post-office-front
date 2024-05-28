@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageComponent } from './home-page.component';
+import {FormsModule} from "@angular/forms";
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
@@ -11,7 +12,7 @@ describe('HomePageComponent', () => {
       imports: [HomePageComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

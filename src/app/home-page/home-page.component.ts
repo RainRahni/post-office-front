@@ -3,6 +3,7 @@ import {NgForOf, NgIf} from "@angular/common";
 import {Shipment} from "../shipment";
 import {ShipmentService} from "../shipment.service";
 import {HttpErrorResponse} from "@angular/common/http";
+import {catchError} from "rxjs";
 
 @Component({
   selector: 'app-home-page',
@@ -14,7 +15,7 @@ import {HttpErrorResponse} from "@angular/common/http";
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })
-export class HomePageComponent implements OnInit{
+export class HomePageComponent implements OnInit {
   public shipments: Shipment[] | undefined;
   public selectedShipment: Shipment | undefined;
   constructor(private shipmentService: ShipmentService) { }
@@ -32,5 +33,6 @@ export class HomePageComponent implements OnInit{
       }
     );
   }
+
   title = 'post-office-front';
 }

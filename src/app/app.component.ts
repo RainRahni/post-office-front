@@ -13,24 +13,5 @@ import {NavbarComponent} from "./navbar/navbar.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-  public shipments: Shipment[] | undefined;
-  public selectedShipment: Shipment | undefined;
-  constructor(private shipmentService: ShipmentService) { }
-
-  ngOnInit() {
-    this.getCreatedShipments();
-  }
-
-  public getCreatedShipments(): void {
-    this.shipmentService.getCreatedShipments().subscribe(
-      (response: Shipment[]) => {
-        this.shipments = response;
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
-  title = 'post-office-front';
+export class AppComponent{
 }

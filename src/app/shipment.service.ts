@@ -10,7 +10,6 @@ import {environment} from "../environments/environment";
 export class ShipmentService {
   private apiServerUrl = environment.apiBaserUrl;
   constructor(private http: HttpClient) { }
-
   public getCreatedShipments(): Observable<Shipment[]> {
     return this.http.get<Shipment[]>(`${this.apiServerUrl}/api/Shipment`);
   }

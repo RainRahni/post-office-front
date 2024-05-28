@@ -1,5 +1,5 @@
 <div class="forms">
-  <form (submit)="onSubmit(0)">
+  <form>
     <div class="row">
       <div class="col">
         <h6>Shipment number</h6>
@@ -34,7 +34,7 @@
       </div>
     </div>
   </form>
-  <button type="button">Create Bag</button>
+  <button type="submit" (click)="onSubmit(1)">Create Bag</button>
 </div>
 <div class="forms">
   <form>
@@ -65,7 +65,7 @@
       </div>
     </div>
   </form>
-  <button type="button">Create Parcel</button>
+  <button type="submit" (click)="onSubmit(2)">Create Parcel</button>
 </div>
 <div class="forms">
   <form>
@@ -84,7 +84,7 @@
       </div>
     </div>
   </form>
-  <button type="button">Add Letters</button>
+  <button type="submit" (click)="onSubmit(3)">Add Letters</button>
 </div>
 <div class="forms">
   <form>
@@ -95,5 +95,5 @@
       </div>
     </div>
   </form>
-  <button type="button">Finalize shipment</button>
+  <button type="submit" (click)="onSubmit(4)">Finalize shipment</button>
 </div>

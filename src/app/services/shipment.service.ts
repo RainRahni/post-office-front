@@ -1,4 +1,4 @@
-import { Shipment} from "./shipment";
+import { Shipment} from "../models/shipment";
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
@@ -18,6 +18,6 @@ export class ShipmentService {
   }
 
   public finalizeShipment(shipmentNumber: string): Observable<any> {
-    return this.http.post(`${this.apiServerUrl}/api/Shipment/Final`, { shipmentNumber });
+    return this.http.post(`${this.apiServerUrl}/api/Shipment/Final?shipmentNumber=${shipmentNumber}`, {});
   }
 }

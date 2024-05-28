@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
-import {Shipment} from "../shipment";
-import {ShipmentService} from "../shipment.service";
+import {Shipment} from "../models/shipment";
+import {ShipmentService} from "../services/shipment.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import {catchError} from "rxjs";
 

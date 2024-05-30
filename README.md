@@ -17,10 +17,13 @@ At Add Data page you can manually add data. Make sure to follow formats displaye
 1.Clone this repository
 
 2.Install dependencies
+
     - cd to root folder
+    
     - npm install
 
 3.Start Development server:
+
     - ng serve
 
 4.Open your browser and navigate to http://localhost:4200/
